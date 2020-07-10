@@ -2,10 +2,13 @@
   "name": "redaxios",
   "version": "0.2.0",
   "description": "The API from Axios, as a tiny abstraction over Fetch.",
-  "source": "src/index.js",
-  "main": "dist/redaxios.js",
-  "umd:main": "dist/redaxios.umd.js",
-  "module": "dist/redaxios.module.js",
+  "browser": {
+    "source": "src/index.js",
+    "main": "dist/redaxios.js",
+    "umd:main": "dist/redaxios.umd.js",
+    "module": "dist/redaxios.module.js"
+  },
+  "main": "src/node.js",
   "scripts": {
     "build": "microbundle",
     "test": "eslint src test && karmatic",
@@ -36,5 +39,8 @@
     "microbundle": "^0.11.0",
     "sinon": "^8.0.4",
     "webpack": "^4.41.5"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
   }
 }
